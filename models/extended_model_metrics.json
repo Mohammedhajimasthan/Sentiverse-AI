@@ -1,0 +1,166 @@
+{
+  "sentiment": {
+    "status": "ok",
+    "model_type": "Pipeline",
+    "dataset_size": 12,
+    "accuracy": 0.9167,
+    "precision": 0.9306,
+    "recall": 0.9167,
+    "f1_score": 0.9121,
+    "labels": [
+      "Positive",
+      "Negative",
+      "Neutral"
+    ],
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "message": "Evaluation metrics computed on a lightweight validation set for the sentiment model."
+  },
+  "emotion": {
+    "status": "ok",
+    "model_type": "Pipeline",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "labels": [
+      "Joy",
+      "Anger",
+      "Sadness",
+      "Fear",
+      "Surprise",
+      "Love",
+      "Neutral"
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "sarcasm": {
+    "status": "ok",
+    "model_type": "Pipeline",
+    "accuracy": 0.875,
+    "precision": 0.9,
+    "recall": 0.875,
+    "f1_score": 0.873,
+    "labels": [
+      "Sarcastic",
+      "Non-Sarcastic"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ]
+  },
+  "fake_review": {
+    "status": "ok",
+    "model_type": "Pipeline",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "labels": [
+      "Suspicious",
+      "Genuine"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0
+      ],
+      [
+        0,
+        4
+      ]
+    ]
+  },
+  "summary": {
+    "sentiment_accuracy": 0.9167,
+    "emotion_accuracy": 1.0,
+    "sarcasm_accuracy": 0.875,
+    "fake_review_accuracy": 1.0
+  }
+}

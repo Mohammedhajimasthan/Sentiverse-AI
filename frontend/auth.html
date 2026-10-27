@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiverse AI | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Sentiverse AI</div>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Analysis</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+      <a class="nav-link" href="analytics.html">Analytics</a>
+      <a class="nav-link" href="help.html">Help</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="auth.html">Login</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Account Access</h1>
+    <p>Sign in or create an account with Supabase Auth</p>
+  </header>
+
+  <main class="page-shell auth-shell">
+    <section class="auth-card">
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-auth-tab="login">Login</button>
+        <button type="button" class="auth-tab" data-auth-tab="signup">Sign up</button>
+      </div>
+
+      <form id="auth-form" data-mode="login">
+        <div class="field-group hidden" id="name-group">
+          <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Your name" />
+        </div>
+
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="field-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="primary-button">Log in</button>
+      </form>
+      <button type="button" id="password-reset" class="text-button">Forgot password?</button>
+      <p id="auth-status" class="cloud-status" role="status" aria-live="polite"></p>
+
+      <div class="auth-note">
+        <strong>Privacy:</strong>
+        <p>Only aggregate analysis summaries are saved to your Supabase account. Individual review text and uploaded files are not sent to cloud storage.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="site.js"></script>
+  <script src="cloud-config.js?v=2"></script>
+  <script type="module" src="cloud.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiverse AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">Sentiverse AI</div>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Analysis</a>
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+            <a class="nav-link" href="analytics.html">Analytics</a>
+            <a class="nav-link" href="help.html">Help</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="auth.html">Login</a>
+        </div>
+    </nav>
+
+    <header class="page-header hero-header">
+        <h1>Sentiverse AI</h1>
+        <p>A Unified AI-Driven Framework for Customer Feedback Intelligence</p>
+    </header>
+
+    <main>
+        <section id="input-section">
+            <h2>Analyze Feedback</h2>
+            <p>Choose customer reviews for aggregate feedback analysis, or analyze a public webpage as one document.</p>
+            <div class="source-tabs" role="tablist" aria-label="Review data source">
+                <button class="source-tab active" type="button" role="tab" aria-selected="true" data-source-mode="text">Paste reviews</button>
+                <button class="source-tab" type="button" role="tab" aria-selected="false" data-source-mode="csv">Upload file</button>
+                <button class="source-tab" type="button" role="tab" aria-selected="false" data-source-mode="url">Analyze a link</button>
+                <button class="source-tab" type="button" role="tab" aria-selected="false" data-source-mode="demo">Demo dataset</button>
+            </div>
+
+            <div class="source-panel" id="source-text" role="tabpanel">
+                <label for="review-input">Review text</label>
+                <textarea id="review-input" placeholder="Enter one customer review, or separate multiple reviews with a blank line..."></textarea>
+                <div class="button-row">
+                    <button id="analyze-button">Analyze Reviews</button>
+                    <button id="explain-button">Explain a Review</button>
+                </div>
+            </div>
+
+            <div class="source-panel hidden" id="source-csv" role="tabpanel" aria-hidden="true">
+                <h3>Upload review data</h3>
+                <p>Upload a CSV with a review, text, comment, feedback, or content column, or a Jupyter Notebook (.ipynb) with reviews in saved table outputs, Markdown text/tables, or a literal code-cell list. Notebook code is never executed.</p>
+                <label class="upload-button">
+                    <input type="file" id="review-file-input" accept=".csv,.ipynb,application/x-ipynb+json" />
+                    Choose CSV or notebook
+                </label>
+            </div>
+
+            <div class="source-panel hidden" id="source-url" role="tabpanel" aria-hidden="true">
+                <h3>Analyze a public webpage</h3>
+                <p>Review pages use identified review records. Other readable web pages and blogs are analyzed as one document, including visible text and emojis. JavaScript-only content, private pages, and media transcripts may not be available.</p>
+                <input id="link-input" type="text" inputmode="url" placeholder="Paste a link, e.g. https://example.com/blog or example.com/article..." />
+                <div class="button-row compact-row">
+                    <button id="analyze-link-button">Analyze Link</button>
+                </div>
+            </div>
+
+            <div class="source-panel hidden" id="source-demo" role="tabpanel" aria-hidden="true">
+                <h3>Try the synthetic demo dataset</h3>
+                <p>Uses labeled synthetic examples for demonstration only; the results are not real customer feedback.</p>
+                <button id="demo-analyze-button">Run Demo Analysis</button>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <h2>Analysis Results</h2>
+            <p id="cloud-status" class="cloud-status" role="status" aria-live="polite"></p>
+            <div id="results">
+                <p>Results will appear here.</p>
+            </div>
+        </section>
+
+        <section id="analytics-section">
+            <h2>Dashboard Analytics</h2>
+            <div id="model-metrics" class="metrics-panel">
+                <p>Model evaluation metrics will appear here.</p>
+            </div>
+            <div id="charts">
+                <p>Summary cards and charts will appear here after dataset upload or review analysis.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2026 Sentiverse AI. All rights reserved.</p>
+    </footer>
+
+    <script src="site.js"></script>
+    <script src="app.js"></script>
+    <script src="cloud-config.js?v=2"></script>
+    <script type="module" src="cloud.js?v=2"></script>
+</body>
+
+</html>

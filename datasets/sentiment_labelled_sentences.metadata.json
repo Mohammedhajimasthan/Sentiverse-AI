@@ -1,0 +1,52 @@
+{
+  "dataset": "UCI Sentiment Labelled Sentences",
+  "uci_id": 331,
+  "doi": "10.24432/C57604",
+  "source_url": "https://archive.ics.uci.edu/dataset/331/sentiment+labelled+sentences",
+  "download_url": "https://archive.ics.uci.edu/static/public/331/sentiment+labelled+sentences.zip",
+  "retrieved_at_utc": "2026-10-19T13:53:57.188246+00:00",
+  "total_records": 3000,
+  "rejected_source_rows": 0,
+  "rejected_rows": [],
+  "rejoined_source_rows": [
+    {
+      "domain": "imdb",
+      "source_file": "imdb_labelled.txt",
+      "source_line_numbers": "179-180"
+    },
+    {
+      "domain": "imdb",
+      "source_file": "imdb_labelled.txt",
+      "source_line_numbers": "969-970"
+    }
+  ],
+  "languages": [
+    "English"
+  ],
+  "domains": [
+    "amazon",
+    "imdb",
+    "yelp"
+  ],
+  "labels": [
+    "Negative",
+    "Positive"
+  ],
+  "license_status": "No license was declared in the retrieved UCI dataset metadata. Use the source under its applicable terms; this project does not redistribute the corpus.",
+  "citation": "D. Kotzias, M. Denil, N. de Freitas, and P. Smyth, \"From Group to Individual Labels Using Deep Features,\" KDD, 2015. UCI Machine Learning Repository, doi:10.24432/C57604.",
+  "split_method": "Deterministic 80/20 development/test split within each domain and sentiment label; SHA-256 of normalized text determines test membership.",
+  "split_counts": {
+    "amazon/Negative/development": 400,
+    "amazon/Negative/test": 100,
+    "amazon/Positive/development": 400,
+    "amazon/Positive/test": 100,
+    "imdb/Negative/development": 400,
+    "imdb/Negative/test": 100,
+    "imdb/Positive/development": 400,
+    "imdb/Positive/test": 100,
+    "yelp/Negative/development": 400,
+    "yelp/Negative/test": 100,
+    "yelp/Positive/development": 400,
+    "yelp/Positive/test": 100
+  }
+}

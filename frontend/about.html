@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiverse AI | About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Sentiverse AI</div>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Analysis</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+      <a class="nav-link" href="analytics.html">Analytics</a>
+      <a class="nav-link" href="help.html">Help</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="auth.html">Login</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>About Sentiverse AI</h1>
+    <p>Unified customer feedback intelligence for sentiment, insight, and action</p>
+  </header>
+
+  <main class="page-shell">
+    <section class="card-panel">
+      <h2>What this project does</h2>
+      <p>Sentiverse AI analyzes customer review text to uncover sentiment, key product aspects, emotion signals, sarcasm risk, and suspicious review patterns. The app turns unstructured feedback into a structured dashboard and clear summaries that teams can act on.</p>
+    </section>
+
+    <section class="card-panel">
+      <h2>Recommended technology stack</h2>
+      <ul class="plain-list">
+        <li><strong>Auth:</strong> Supabase Auth for email/password signup, login, password recovery, and session management.</li>
+        <li><strong>Database:</strong> Supabase Postgres with row-level security for account-owned aggregate analysis history.</li>
+        <li><strong>Backend:</strong> FastAPI with Python NLP models.</li>
+      </ul>
+      <p class="callout-box">Uploaded review files and individual review text are analyzed locally by the app and are not uploaded to Supabase.</p>
+    </section>
+  </main>
+
+  <script src="site.js"></script>
+  <script src="cloud-config.js?v=2"></script>
+  <script type="module" src="cloud.js?v=2"></script>
+</body>
+</html>

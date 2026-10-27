@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiverse AI | Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Sentiverse AI</div>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Analysis</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+      <a class="nav-link" href="analytics.html">Analytics</a>
+      <a class="nav-link" href="help.html">Help</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="auth.html">Login</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Executive Dashboard</h1>
+    <p>Calculated from your latest analyzed review dataset</p>
+  </header>
+
+  <main class="page-shell">
+    <section class="card-panel" id="dashboard-status">
+      <p>Loading the latest analysis overview...</p>
+    </section>
+    <section class="card-panel" id="cloud-status" role="status" aria-live="polite"></section>
+
+    <section class="card-grid" id="dashboard-overview"></section>
+
+    <section class="card-panel" id="dashboard-drivers">
+      <h2>What is driving sentiment?</h2>
+      <p>Aspect-level sentiment patterns will appear after review analysis.</p>
+    </section>
+
+    <section class="card-panel" id="dashboard-aspects">
+      <h2>Aspect analysis</h2>
+      <p>Aspect counts will appear after review analysis.</p>
+    </section>
+
+    <section class="card-panel" id="dashboard-ratings">
+      <h2>Rating distribution</h2>
+      <p>Rating data is not available.</p>
+    </section>
+
+    <section class="card-panel" id="dashboard-emotions">
+      <h2>Emotion distribution</h2>
+      <p>Emotion data will appear after review analysis.</p>
+    </section>
+
+    <section class="card-panel" id="dashboard-summary">
+      <h2>Evidence-based summary</h2>
+      <p>Run an analysis to see a summary derived from actual review records.</p>
+    </section>
+
+    <section class="card-panel" id="saved-analyses">
+      <h2>Cloud analysis history</h2>
+      <p>Sign in and configure Supabase to view saved aggregate analyses.</p>
+    </section>
+  </main>
+
+  <script src="site.js"></script>
+  <script src="cloud-config.js?v=2"></script>
+  <script src="dashboard.js"></script>
+  <script type="module" src="cloud.js?v=2"></script>
+</body>
+</html>

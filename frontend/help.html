@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentiverse AI | Help</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-brand">Sentiverse AI</div>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">Analysis</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+      <a class="nav-link" href="analytics.html">Analytics</a>
+      <a class="nav-link" href="help.html">Help</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="auth.html">Login</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Help & Usage</h1>
+    <p>How to use the review analysis workflow</p>
+  </header>
+
+  <main class="page-shell">
+    <section class="card-panel">
+      <h2>Quick guide</h2>
+      <ol class="plain-list">
+        <li>In Analyze Feedback, choose Paste reviews, Upload file, Analyze a link, or Demo dataset.</li>
+        <li>For manual batches, separate each review with a blank line. CSV uploads need a review-text column. Jupyter Notebooks (.ipynb) can provide reviews in saved table outputs, Markdown text/tables, or literal review lists in code cells; notebook code is never executed.</li>
+        <li>Review the validation counts, sentiment, aspects, emotions, ratings, and supporting review examples. Sentiment drivers show which mentioned aspects are most associated with positive and negative feedback; they are not proof of causation.</li>
+        <li>Use the Dashboard page to inspect the latest aggregate overview. The Analytics page explains why model accuracy is not yet reported.</li>
+      </ol>
+    </section>
+
+    <section class="card-panel">
+      <h2>Link extraction limitations</h2>
+      <p>Links are analyzed when a page exposes structured/marked review text or when the URL points directly to a CSV/JSON review export with a recognized review-text field. Product descriptions and titles are never treated as reviews. Sign-in-only or JavaScript-rendered content may not be accessible; use a source-provided export or authorized API rather than bypassing access controls.</p>
+    </section>
+
+    <section class="card-panel callout-box">
+      <h2>Account and cloud history</h2>
+      <p>Supabase Auth provides email/password accounts, and Supabase Postgres stores aggregate analysis history when configured in <code>frontend/cloud-config.js</code>. Only aggregate summaries are saved; uploaded files and individual review text are not sent to cloud storage. See the README for Supabase Auth, redirect URL, and row-level security setup.</p>
+    </section>
+  </main>
+
+  <script src="site.js"></script>
+  <script src="cloud-config.js?v=2"></script>
+  <script type="module" src="cloud.js?v=2"></script>
+</body>
+</html>

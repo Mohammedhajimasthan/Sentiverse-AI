@@ -1,0 +1,139 @@
+{
+  "status": "ok",
+  "model_type": "Pipeline",
+  "dataset": "UCI Sentiment Labelled Sentences",
+  "dataset_doi": "10.24432/C57604",
+  "dataset_split": "test",
+  "dataset_size": 600,
+  "overall": {
+    "sample_count": 600,
+    "accuracy": 0.5967,
+    "weighted_precision": 0.6505,
+    "weighted_recall": 0.5967,
+    "weighted_f1": 0.6196,
+    "macro_precision": 0.4337,
+    "macro_recall": 0.3978,
+    "macro_f1": 0.4131,
+    "labels": [
+      "Negative",
+      "Positive",
+      "Neutral"
+    ],
+    "confusion_matrix": [
+      [
+        199,
+        80,
+        21
+      ],
+      [
+        114,
+        159,
+        27
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "by_domain": {
+    "amazon": {
+      "sample_count": 200,
+      "accuracy": 0.64,
+      "weighted_precision": 0.6845,
+      "weighted_recall": 0.64,
+      "weighted_f1": 0.6615,
+      "macro_precision": 0.4563,
+      "macro_recall": 0.4267,
+      "macro_f1": 0.441,
+      "labels": [
+        "Negative",
+        "Positive",
+        "Neutral"
+      ],
+      "confusion_matrix": [
+        [
+          64,
+          30,
+          6
+        ],
+        [
+          29,
+          64,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "imdb": {
+      "sample_count": 200,
+      "accuracy": 0.54,
+      "weighted_precision": 0.6033,
+      "weighted_recall": 0.54,
+      "weighted_f1": 0.5587,
+      "macro_precision": 0.4022,
+      "macro_recall": 0.36,
+      "macro_f1": 0.3725,
+      "labels": [
+        "Negative",
+        "Positive",
+        "Neutral"
+      ],
+      "confusion_matrix": [
+        [
+          68,
+          25,
+          7
+        ],
+        [
+          47,
+          40,
+          13
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "yelp": {
+      "sample_count": 200,
+      "accuracy": 0.61,
+      "weighted_precision": 0.6628,
+      "weighted_recall": 0.61,
+      "weighted_f1": 0.6324,
+      "macro_precision": 0.4419,
+      "macro_recall": 0.4067,
+      "macro_f1": 0.4216,
+      "labels": [
+        "Negative",
+        "Positive",
+        "Neutral"
+      ],
+      "confusion_matrix": [
+        [
+          67,
+          25,
+          8
+        ],
+        [
+          38,
+          55,
+          7
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "limitations": "This is a binary English sentence-level benchmark, not a measure of multilingual, aspect, emotion, sarcasm, or fake-review performance."
+}

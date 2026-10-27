@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Sentiverse AI",
+    "slug": "sentiverse-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.sentiverseai.mobile",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.sentiverseai.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7cbfcb39-ec6e-4c90-a2b1-2c3c3422451b"
+      }
+    },
+    "owner": "haji_masthan"
+  }
+}
